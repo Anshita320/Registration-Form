@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration Form</title>
+  <!-- link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h2 style="text-align: center;">Registration Form</h2><br><br>
+      <form id="regForm" autocomplete="off">
+        <div class="row">
+          <div class="col">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" required>
+          </div>
+          <div class="col">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" type="text" required>
+          </div>
+        </div>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <div class="row">
+          <div class="col">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required>
+          </div>
+          <div class="col">
+            <label for="dob">Date of Birth</label>
+            <input id="dob" name="dob" type="date" required>
+          </div>
+        </div>
+
+        <label>Gender</label>
+        <div class="checkbox-group">
+          <label><input type="radio" name="gender" value="Female" checked> Female</label>
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+
+        <label>Skills</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+          <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+          <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+          <label><input type="checkbox" name="skills" value="React"> React</label>
+        </div>
+
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">Select country</option>
+          <option>India</option>
+          <option>United States</option>
+          <option>United Kingdom</option>
+          <option>Canada</option>
+        </select>
+
+        <label for="bio">Short bio</label>
+        <textarea id="bio" name="bio" rows="3"></textarea>
+
+        <label for="avatar">Profile picture (optional)</label>
+        <input type="file" id="avatar" accept="image/*">
+
+        <div class="btns">
+          <button type="submit" class="btn">Register</button>
+          <button type="button" id="resetBtn" class="btn secondary">Reset</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="display-area">
+      <h2>Submitted Users</h2>
+      <div id="cards" class="cards"></div>
+    </div>
+  </div>
+
+  <!-- link JS -->
+  <script src="script.js"></script>
+</body>
+</html>

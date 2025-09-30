@@ -1,0 +1,83 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+body {
+  background: /*#f9fafb;*/ black;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(30,40,60,0.08);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+h2 { margin-bottom: 8px; }
+p.lead { margin-bottom: 18px; font-size: 14px; }
+
+form label { display: block; margin-bottom: 6px; }
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.row { display: flex; gap: 10px; }
+.col { flex: 1; }
+
+.checkbox-group { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+.checkbox-group label { font-size: 13px; }
+
+.btns { display:flex; gap:10px; }
+.btn {
+  background: #334155;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #334155;
+}
+
+.display-area {
+  padding: 12px;
+  border-left: 1px dashed #ccc;
+}
+
+.cards { display:flex; flex-direction:column; gap:12px; }
+.card {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  border: 1px solid #eef2ff;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+.avatar {
+  width:60px; height:60px; border-radius:10px;
+  object-fit:cover; background:#ddd;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:bold; color:#555;
+}
+.meta { font-size:13px; color:#555; margin-top:6px; }
+
+@media (max-width:880px) {
+  .container { grid-template-columns: 1fr; }
+  .display-area { border-left:none; border-top:1px dashed #ccc; }
+}
